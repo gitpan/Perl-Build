@@ -18,12 +18,9 @@ no_index:
   directory:
     - inc
 provides:
-  App::perlbuild:
-    file: lib/App/perlbuild.pm
-    version: 0.01
   Perl::Build:
     file: lib/Perl/Build.pm
-    version: 0.01
+    version: 0.03
 requires:
   CPAN::Perl::Releases: 0
   Devel::PatchPerl: 0
@@ -31,4 +28,4 @@ requires:
   perl: 5.008005
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.01
+version: 0.03

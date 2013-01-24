@@ -40,13 +40,9 @@
       }
    },
    "provides" : {
-      "App::perlbuild" : {
-         "file" : "lib/App/perlbuild.pm",
-         "version" : "0.01"
-      },
       "Perl::Build" : {
          "file" : "lib/Perl/Build.pm",
-         "version" : "0.01"
+         "version" : "0.03"
       }
    },
    "release_status" : "stable",
@@ -55,5 +51,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0.01"
+   "version" : "0.03"
 }

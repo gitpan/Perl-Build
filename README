@@ -74,28 +74,32 @@ METHODS
     Perl::Build->install(%args)
         Build and install Perl5 from extracted source directory.
 
-    src_path(Required)
-        Source code directory to build. That contains extracted Perl5 source
-        code.
+        src_path(Required)
+            Source code directory to build. That contains extracted Perl5
+            source code.
 
-    dst_path(Required)
-        Destination directory to install perl.
+        dst_path(Required)
+            Destination directory to install perl.
 
-    configure_options : ArrayRef(Optional)
-        Command line arguments for ./Configure.
+        configure_options : ArrayRef(Optional)
+            Command line arguments for ./Configure.
 
-        (Default: ['-de'])
+            (Default: ['-de'])
 
-    patchperl(Optional)
-        Path to patchperl. patchperl is a patch set for older perls.
+        patchperl(Optional)
+            Path to patchperl. patchperl is a patch set for older perls.
 
-        (Default: 'patchperl')
+            (Default: 'patchperl')
 
-    test: Bool(Optional)
-        If you set this value as true, Perl::Build runs "make test" after
-        building.
+        test: Bool(Optional)
+            If you set this value as true, Perl::Build runs "make test"
+            after building.
 
-        (Default: 0)
+            (Default: 0)
+
+    Perl::Build->symlink_devel_executables($bin_dir:Str)
+        Perl5 binary generated with " -Dusedevel ", is "perl-5.12.2" form.
+        This method symlinks "perl-5.12.2" to "perl".
 
 THANKS TO
     most of the code was taken from App::perlbrew.
