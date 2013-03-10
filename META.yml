@@ -20,13 +20,13 @@ no_index:
 provides:
   Perl::Build:
     file: lib/Perl/Build.pm
-    version: 0.05
+    version: 0.06
 requires:
   CPAN::Perl::Releases: 0
-  Devel::PatchPerl: 0
+  Devel::PatchPerl: 0.84
   File::pushd: 0
   HTTP::Tiny: 0
   perl: 5.008005
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.05
+version: 0.06
