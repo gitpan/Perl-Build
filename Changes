@@ -1,5 +1,16 @@
 Revision history for Perl extension App::perlbuild
 
+0.09 2013-03-27T05:13:03Z
+
+    - Remove 'patchperl' option in OO APIs.
+      Use Devel::PatchPerl as a library.
+      (tokuhirom)
+
+0.08 2013-03-22T20:32:06
+
+    - minil-ized
+      (tokuhirom)
+
 0.06 2013-03-10T10:37:42
 
     - Depend to latest Devel::PatchPerl
