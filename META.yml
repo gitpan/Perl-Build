@@ -20,9 +20,9 @@ requires:
   Devel::PatchPerl: 0.84
   File::pushd: 0
   HTTP::Tiny: 0
-  perl: 5.008005
+  perl: 5.008002
 resources:
   bugtracker: https://github.com/tokuhirom/Perl-Build/issues
   homepage: https://github.com/tokuhirom/Perl-Build
   repository: git://github.com/tokuhirom/Perl-Build.git
-version: 0.09
+version: 0.10
