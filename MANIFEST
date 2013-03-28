@@ -8,7 +8,7 @@ README.md
 author/fatpack.pl
 cpanfile
 lib/Perl/Build.pm
-perl-build
+minil.toml
 script/perl-build
 t/00_compile.t
 xt/02_perlcritic.t

@@ -17,7 +17,7 @@ name: Perl-Build
 provides:
   Perl::Build:
     file: lib/Perl/Build.pm
-    version: 0.11
+    version: 0.12
 requires:
   CPAN::Perl::Releases: 0
   Devel::PatchPerl: 0.84
@@ -28,4 +28,4 @@ resources:
   bugtracker: https://github.com/tokuhirom/Perl-Build/issues
   homepage: https://github.com/tokuhirom/Perl-Build
   repository: git://github.com/tokuhirom/Perl-Build.git
-version: 0.11
+version: 0.12
