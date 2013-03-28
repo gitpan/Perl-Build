@@ -33,7 +33,12 @@
          }
       }
    },
-   "provides" : {},
+   "provides" : {
+      "Perl::Build" : {
+         "file" : "lib/Perl/Build.pm",
+         "version" : "0.11"
+      }
+   },
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
@@ -45,5 +50,5 @@
          "web" : "https://github.com/tokuhirom/Perl-Build"
       }
    },
-   "version" : "0.10"
+   "version" : "0.11"
 }

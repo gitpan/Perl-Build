@@ -14,7 +14,10 @@ meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: Perl-Build
-provides: {}
+provides:
+  Perl::Build:
+    file: lib/Perl/Build.pm
+    version: 0.11
 requires:
   CPAN::Perl::Releases: 0
   Devel::PatchPerl: 0.84
@@ -25,4 +28,4 @@ resources:
   bugtracker: https://github.com/tokuhirom/Perl-Build/issues
   homepage: https://github.com/tokuhirom/Perl-Build
   repository: git://github.com/tokuhirom/Perl-Build.git
-version: 0.10
+version: 0.11
