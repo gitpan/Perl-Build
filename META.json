@@ -15,20 +15,30 @@
       "build" : {
          "requires" : {
             "Test::More" : "0.98",
-            "Test::Requires" : 0
+            "Test::Requires" : "0"
          }
       },
       "configure" : {
          "requires" : {
+            "CPAN::Meta" : "0",
             "Module::Build" : "0.38"
+         }
+      },
+      "develop" : {
+         "requires" : {
+            "Pod::Wordlist::hanekomu" : "0",
+            "Test::CPAN::Meta" : "0",
+            "Test::MinimumVersion" : "0.10108",
+            "Test::Pod" : "1.41",
+            "Test::Spelling" : "0"
          }
       },
       "runtime" : {
          "requires" : {
-            "CPAN::Perl::Releases" : 0,
+            "CPAN::Perl::Releases" : "0",
             "Devel::PatchPerl" : "0.84",
-            "File::pushd" : 0,
-            "HTTP::Tiny" : 0,
+            "File::pushd" : "0",
+            "HTTP::Tiny" : "0",
             "perl" : "5.008002"
          }
       }
@@ -36,7 +46,7 @@
    "provides" : {
       "Perl::Build" : {
          "file" : "lib/Perl/Build.pm",
-         "version" : "0.12"
+         "version" : "0.13"
       }
    },
    "release_status" : "stable",
@@ -50,5 +60,5 @@
          "web" : "https://github.com/tokuhirom/Perl-Build"
       }
    },
-   "version" : "0.12"
+   "version" : "0.13"
 }
