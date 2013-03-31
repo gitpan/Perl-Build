@@ -4,7 +4,7 @@ use warnings;
 use utf8;
 
 use 5.008002;
-our $VERSION = '0.13';
+our $VERSION = '0.14';
 
 use Carp ();
 use File::Basename;
@@ -386,6 +386,13 @@ Perl5 binary generated with C< -Dusedevel >, is "perl-5.12.2" form. This method 
 
 If you want to use patchperl plugins, please google "PERL5_PATCHPERL_PLUGIN".
 
+=item What's difference between perlbrew?
+
+L<perlbrew> is a perl5 installation manager. But perl-build is a simple perl5 compilation and installation assistant tool.
+It makes perl5 installation easily. That's all. perl-build doesn't care user's environment.
+
+So, perl-build is just a installer.
+
 =back
 
 =head1 THANKS TO
@@ -398,8 +405,18 @@ Thanks
 
 =head1 AUTHOR
 
-Tokuhiro Matsuno E<lt>tokuhirom AAJKLFJEF@ GMAIL COME<gt>
+Tokuhiro Matsuno E<lt>tokuhirom@gmail.comE<gt>
 
+
+=head1 CONTRIBUTORS
+
+=over 4
+
+=item Syohei YOSHIDA E<lt>syohex@gmail.comE<gt>
+
+=item Daisuke Murase E<lt>typester@cpan.orgE<gt>
+
+=back
 
 =head1 LICENSE
 

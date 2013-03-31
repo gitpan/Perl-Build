@@ -1,7 +1,7 @@
 ---
 abstract: 'perl builder'
 author:
-  - 'Tokuhiro Matsuno <tokuhirom AAJKLFJEF@ GMAIL COM>'
+  - 'Tokuhiro Matsuno <tokuhirom@gmail.com>'
 build_requires:
   Test::More: 0.98
   Test::Requires: 0
@@ -18,7 +18,7 @@ name: Perl-Build
 provides:
   Perl::Build:
     file: lib/Perl/Build.pm
-    version: 0.13
+    version: 0.14
 requires:
   CPAN::Perl::Releases: 0
   Devel::PatchPerl: 0.84
@@ -29,4 +29,7 @@ resources:
   bugtracker: https://github.com/tokuhirom/Perl-Build/issues
   homepage: https://github.com/tokuhirom/Perl-Build
   repository: git://github.com/tokuhirom/Perl-Build.git
-version: 0.13
+version: 0.14
+x_contributors:
+  - 'Syohei YOSHIDA <syohex@gmail.com>'
+  - 'Daisuke Murase <typester@cpan.org>'
