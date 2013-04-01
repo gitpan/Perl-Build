@@ -13,3 +13,8 @@ script/perl-build
 t/00_compile.t
 xt/02_perlcritic.t
 xt/live/01_available.t
+Build.PL
+LICENSE
+META.json
+META.yml
+MANIFEST
