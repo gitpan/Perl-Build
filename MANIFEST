@@ -8,9 +8,11 @@ README.md
 author/fatpack.pl
 cpanfile
 lib/Perl/Build.pm
+lib/Perl/Build/Built.pm
 minil.toml
 script/perl-build
 t/00_compile.t
+t/01_perl_build_built.t
 xt/02_perlcritic.t
 xt/live/01_available.t
 Build.PL
