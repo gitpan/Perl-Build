@@ -1,5 +1,10 @@
 Revision history for Perl extension App::perlbuild
 
+0.17 2013-04-05T08:36:20Z
+
+    - Perl::Build::Built::new should take HashRef
+      (syohex)
+
 0.16 2013-04-04T04:08:37Z
 
     - Add a Built package and integrate it into Build.pm
@@ -7,7 +12,7 @@ Revision history for Perl extension App::perlbuild
 
 0.15 2013-04-01T01:55:25Z
 
-    - Grammer fix and Typo fixes.
+    - Grammar fix and Typo fixes.
       (Mark Stosberg)
 
 0.14 2013-03-31T07:23:51Z

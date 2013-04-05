@@ -4,7 +4,7 @@ use warnings;
 use utf8;
 
 use 5.008002;
-our $VERSION = '0.16';
+our $VERSION = '0.17';
 
 use Carp ();
 use File::Basename;
@@ -210,9 +210,9 @@ sub install {
         }
         $class->do_system('make install');
     }
-    return Perl::Build::Built->new(
+    return Perl::Build::Built->new({
         installed_path => $dst_path,
-    );
+    });
 }
 
 sub do_system {

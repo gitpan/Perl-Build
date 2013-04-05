@@ -4,7 +4,6 @@ author:
   - 'Tokuhiro Matsuno <tokuhirom@gmail.com>'
 build_requires:
   Test::More: 0.98
-  Test::Requires: 0
 configure_requires:
   CPAN::Meta: 0
   CPAN::Meta::Prereqs: 0
@@ -27,23 +26,26 @@ no_index:
 provides:
   Perl::Build:
     file: lib/Perl/Build.pm
-    version: 0.16
+    version: 0.17
   Perl::Build::Built:
     file: lib/Perl/Build/Built.pm
-    version: 0.16
+    version: 0.17
 requires:
   CPAN::Perl::Releases: 0
   Devel::PatchPerl: 0.84
+  File::Temp: 0
   File::pushd: 0
+  Getopt::Long: 0
   HTTP::Tiny: 0
+  Pod::Usage: 0
   perl: 5.008002
 resources:
   bugtracker: https://github.com/tokuhirom/Perl-Build/issues
   homepage: https://github.com/tokuhirom/Perl-Build
   repository: git://github.com/tokuhirom/Perl-Build.git
-version: 0.16
+version: 0.17
 x_contributors:
-  - 'Syohei YOSHIDA <syohex@gmail.com>'
   - 'Daisuke Murase <typester@cpan.org>'
-  - 'Mark Stosberg <mark@stosberg.com>'
   - 'Kent Fredric <kentfredric@gmail.com>'
+  - 'Mark Stosberg <mark@stosberg.com>'
+  - 'Syohei YOSHIDA <syohex@gmail.com>'

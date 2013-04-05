@@ -22,12 +22,6 @@
       ]
    },
    "prereqs" : {
-      "build" : {
-         "requires" : {
-            "Test::More" : "0.98",
-            "Test::Requires" : "0"
-         }
-      },
       "configure" : {
          "requires" : {
             "CPAN::Meta" : "0",
@@ -48,20 +42,28 @@
          "requires" : {
             "CPAN::Perl::Releases" : "0",
             "Devel::PatchPerl" : "0.84",
+            "File::Temp" : "0",
             "File::pushd" : "0",
+            "Getopt::Long" : "0",
             "HTTP::Tiny" : "0",
+            "Pod::Usage" : "0",
             "perl" : "5.008002"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Test::More" : "0.98"
          }
       }
    },
    "provides" : {
       "Perl::Build" : {
          "file" : "lib/Perl/Build.pm",
-         "version" : "0.16"
+         "version" : "0.17"
       },
       "Perl::Build::Built" : {
          "file" : "lib/Perl/Build/Built.pm",
-         "version" : "0.16"
+         "version" : "0.17"
       }
    },
    "release_status" : "stable",
@@ -75,11 +77,11 @@
          "web" : "https://github.com/tokuhirom/Perl-Build"
       }
    },
-   "version" : "0.16",
+   "version" : "0.17",
    "x_contributors" : [
-      "Syohei YOSHIDA <syohex@gmail.com>",
       "Daisuke Murase <typester@cpan.org>",
+      "Kent Fredric <kentfredric@gmail.com>",
       "Mark Stosberg <mark@stosberg.com>",
-      "Kent Fredric <kentfredric@gmail.com>"
+      "Syohei YOSHIDA <syohex@gmail.com>"
    ]
 }
