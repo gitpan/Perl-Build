@@ -4,7 +4,7 @@ use warnings;
 use utf8;
 
 use 5.008002;
-our $VERSION = '0.17';
+our $VERSION = '0.18';
 
 use Carp ();
 use File::Basename;
@@ -139,6 +139,40 @@ sub install_from_cpan {
         dst_path          => $dst_path,
         configure_options => $configure_options,
         test              => $args{test},
+        jobs              => $args{jobs},
+    );
+}
+
+sub install_from_url {
+    my ($class, $dist_tarball_url, %args) = @_;
+    $args{patchperl} && Carp::croak "The patchperl argument was deprected.";
+
+    my $build_dir = $args{build_dir}
+        || File::Temp::tempdir( CLEANUP => 1 );
+    my $tarball_dir = $args{tarball_dir}
+        || File::Temp::tempdir( CLEANUP => 1 );
+    my $dst_path = $args{dst_path}
+        or die "Missing mandatory parameter: dst_path";
+    my $configure_options = $args{configure_options}
+        || ['-de'];
+
+    my $dist_tarball = basename($dist_tarball_url);
+    my $dist_tarball_path = catfile($tarball_dir, $dist_tarball);
+    if (-f $dist_tarball_path) {
+        print "Use the previously fetched ${dist_tarball}\n";
+    }
+    else {
+        print "Fetching $dist_tarball_path ($dist_tarball_url)\n";
+        http_mirror( $dist_tarball_url, $dist_tarball_path );
+    }
+
+    my $dist_extracted_path = Perl::Build->extract_tarball($dist_tarball_path, $build_dir);
+    Perl::Build->install(
+        src_path          => $dist_extracted_path,
+        dst_path          => $dst_path,
+        configure_options => $configure_options,
+        test              => $args{test},
+        jobs              => $args{jobs},
     );
 }
 
@@ -159,6 +193,7 @@ sub install_from_tarball {
         dst_path          => $dst_path,
         configure_options => $configure_options,
         test              => $args{test},
+        jobs              => $args{jobs},
     );
 }
 
@@ -172,6 +207,7 @@ sub install {
         or die "Missing mandatory parameter: dst_path";
     my $configure_options = $args{configure_options}
         or die "Missing mandatory parameter: configure_options";
+    my $jobs = $args{jobs}; # optional
 
     unshift @$configure_options, qq(-Dprefix=$dst_path);
 
@@ -204,8 +240,13 @@ sub install {
         # }
 
         # build
-        $class->do_system('make');
+        my @make = qw(make);
+        if ($jobs) {
+            push @make, '-j', $jobs;
+        }
+        $class->do_system(\@make);
         if ($args{test}) {
+            local $ENV{TEST_JOBS} = $jobs;
             $class->do_system('make test');
         }
         $class->do_system('make install');
@@ -251,6 +292,8 @@ sub info {
 __END__
 
 =encoding utf8
+
+=for stopwords tarball Optional symlinks patchperl
 
 =head1 NAME
 
@@ -314,13 +357,19 @@ Command line arguments for ./Configure.
 
 (Default: C<< ['-de'] >>)
 
-=item tarball_dir(Optional)
+=item tarball_dir (Optional)
 
 Temporary directory to put tar ball.
 
-=item build_dir(Optional)
+=item build_dir (Optional)
 
 Temporary directory to build binary.
+
+=item jobs: Int(Optional)
+
+Parallel building and testing.
+
+(Default: 1)
 
 =back
 
@@ -332,7 +381,7 @@ You can pass following options in %args.
 
 =over 4
 
-=item dst_path(Required)
+=item dst_path (Required)
 
 Destination directory to install perl.
 
@@ -342,9 +391,15 @@ Command line arguments for ./Configure.
 
 (Default: C<< ['-de'] >>)
 
-=item build_dir(Optional)
+=item build_dir (Optional)
 
 Temporary directory to build binary.
+
+=item jobs: Int(Optional)
+
+Parallel building and testing.
+
+(Default: 1)
 
 =back
 
@@ -354,11 +409,11 @@ Build and install Perl5 from extracted source directory.
 
 =over 4
 
-=item src_path(Required)
+=item src_path (Required)
 
 Source code directory to build.  That contains extracted Perl5 source code.
 
-=item dst_path(Required)
+=item dst_path (Required)
 
 Destination directory to install perl.
 
@@ -373,6 +428,12 @@ Command line arguments for ./Configure.
 If you set this value as true, Perl::Build runs C<< make test >> after building.
 
 (Default: 0)
+
+=item jobs: Int(Optional)
+
+Parallel building and testing.
+
+(Default: 1)
 
 =back
 
@@ -390,7 +451,7 @@ Perl5 binary generated with C< -Dusedevel >, is "perl-5.12.2" form. This method 
 
 =item How can I use patchperl plugins?
 
-If you want to use patchperl plugins, please google "PERL5_PATCHPERL_PLUGIN".
+If you want to use patchperl plugins, please Google "PERL5_PATCHPERL_PLUGIN".
 
 =item What's the difference between perlbrew?
 

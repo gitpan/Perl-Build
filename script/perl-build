@@ -24,6 +24,7 @@ GetOptions(
     'U=s@' => \@U,
     'patches=s' => \$patches,
     'build-dir=s' => \$build_dir,
+    'j|jobs=i' => \my $jobs,
 );
 for (@D, @A, @U) {
     s/^=//;
@@ -42,13 +43,24 @@ push @configure_options, map { "-U$_" } @U;
 
 $ENV{PERL5_PATCHPERL_PLUGIN} = $patches if defined $patches;
 
-if ($stuff =~ /\.(gz|bz2)$/) {
+if ($stuff =~ m{^http://}) {
+    Perl::Build->install_from_url(
+        $stuff => (
+            dst_path          => $dest,
+            configure_options => \@configure_options,
+            test              => $test,
+            build_dir         => $build_dir,
+            jobs              => $jobs,
+        )
+    );
+} elsif ($stuff =~ /\.(gz|bz2)$/) {
     Perl::Build->install_from_tarball(
         $stuff => (
             dst_path          => $dest,
             configure_options => \@configure_options,
             test              => $test,
             build_dir         => $build_dir,
+            jobs              => $jobs,
         )
     );
 } else {
@@ -59,6 +71,7 @@ if ($stuff =~ /\.(gz|bz2)$/) {
             configure_options => \@configure_options,
             test              => $test,
             build_dir         => $build_dir,
+            jobs              => $jobs,
         )
     );
 }
@@ -106,6 +119,12 @@ You can set I<PERL5_PATCHPERL_PLUGIN> environment variable by this option.
 =item --build-dir=path
 
 Specify perl build path. optional. (Default: temporary directory)
+
+=item -j n
+
+=item --jobs n
+
+Parallel building and testing.
 
 =back
 
