@@ -27,10 +27,10 @@ no_index:
 provides:
   Perl::Build:
     file: lib/Perl/Build.pm
-    version: 0.21
+    version: 1.00
   Perl::Build::Built:
     file: lib/Perl/Build/Built.pm
-    version: 0.21
+    version: 1.00
 requires:
   CPAN::Perl::Releases: 0
   Devel::PatchPerl: 0.88
@@ -44,7 +44,7 @@ resources:
   bugtracker: https://github.com/tokuhirom/Perl-Build/issues
   homepage: https://github.com/tokuhirom/Perl-Build
   repository: git://github.com/tokuhirom/Perl-Build.git
-version: 0.21
+version: 1.00
 x_contributors:
   - 'Daisuke Murase <typester@cpan.org>'
   - 'Kent Fredric <kentfredric@gmail.com>'
