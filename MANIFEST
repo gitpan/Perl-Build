@@ -3,7 +3,7 @@ Changes
 LICENSE
 META.json
 README.md
-author/fatpack.pl
+author/fatpack.sh
 cpanfile
 lib/Perl/Build.pm
 lib/Perl/Build/Built.pm
