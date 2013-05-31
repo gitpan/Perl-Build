@@ -4,7 +4,7 @@ use warnings;
 use utf8;
 
 use 5.008002;
-our $VERSION = '1.01';
+our $VERSION = '1.03';
 
 use Carp ();
 use File::Basename;
@@ -316,6 +316,10 @@ __END__
 Perl::Build - perl builder
 
 =head1 SYNOPSIS
+
+=head1 Install as plenv plugin(Recommended)
+
+    % git clone git://github.com/tokuhirom/Perl-Build.git ~/.plenv/plugins/perl-build/
 
 =head1 CLI interface without dependencies
 

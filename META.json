@@ -59,11 +59,11 @@
    "provides" : {
       "Perl::Build" : {
          "file" : "lib/Perl/Build.pm",
-         "version" : "1.01"
+         "version" : "1.03"
       },
       "Perl::Build::Built" : {
          "file" : "lib/Perl/Build/Built.pm",
-         "version" : "1.01"
+         "version" : "1.03"
       }
    },
    "release_status" : "stable",
@@ -77,7 +77,7 @@
          "web" : "https://github.com/tokuhirom/Perl-Build"
       }
    },
-   "version" : "1.01",
+   "version" : "1.03",
    "x_contributors" : [
       "Daisuke Murase <typester@cpan.org>",
       "Kent Fredric <kentfredric@gmail.com>",
