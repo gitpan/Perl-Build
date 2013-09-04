@@ -1,5 +1,16 @@
 Revision history for Perl extension App::perlbuild
 
+1.05 2013-09-04T01:46:13Z
+
+    - document `--test` option.
+      (tokuhirom)
+    - Tweaks needed for conformance with CPAN::Changes::Spec
+      (Neil Bowers)
+    - plenv-install: Use 'permute' option for Getopt::Long::Parser
+      It allows `plenv install 5.18.1 -Dusedtrace --as 5.18.1-dtrace`.
+      This issue was reported by hanekomu.
+      (tokuhirom)
+
 1.04 2013-08-13T00:03:11Z
 
     - Added --as option for plenv-install command
@@ -125,14 +136,12 @@ Revision history for Perl extension App::perlbuild
     - switch to HTTP::Tiny
       (tokuhirom)
 
-0.03
+0.03 2013-01-23
 
     - support relative path to install tar ball
       (tokuhirom)
 
-0.02
-
     - more documentations
 
-0.01    Sat Jan 12 17:18:43 2013
+0.01 2013-01-12T17:18:43
     - original version
