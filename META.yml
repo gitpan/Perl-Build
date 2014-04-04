@@ -3,17 +3,17 @@ abstract: 'perl builder'
 author:
   - 'Tokuhiro Matsuno <tokuhirom@gmail.com>'
 build_requires:
-  Test::More: 0.98
+  Test::More: '0.98'
 configure_requires:
-  CPAN::Meta: 0
-  CPAN::Meta::Prereqs: 0
-  Module::Build: 0.38
+  CPAN::Meta: '0'
+  CPAN::Meta::Prereqs: '0'
+  Module::Build: '0.38'
 dynamic_config: 0
-generated_by: 'Minilla/v0.6.3, CPAN::Meta::Converter version 2.131560'
+generated_by: 'Minilla/v0.13.0, CPAN::Meta::Converter version 2.133380'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
-  version: 1.4
+  version: '1.4'
 name: Perl-Build
 no_index:
   directory:
@@ -24,27 +24,28 @@ no_index:
     - eg
     - examples
     - author
+    - builder
 provides:
   Perl::Build:
     file: lib/Perl/Build.pm
-    version: 1.05
+    version: '1.06'
   Perl::Build::Built:
     file: lib/Perl/Build/Built.pm
-    version: 1.05
+    version: '1.06'
 requires:
-  CPAN::Perl::Releases: 0
-  Devel::PatchPerl: 0.88
-  File::Temp: 0
-  File::pushd: 0
-  Getopt::Long: 0
-  HTTP::Tiny: 0
-  Pod::Usage: 0
-  perl: 5.008002
+  CPAN::Perl::Releases: '0'
+  Devel::PatchPerl: '0.88'
+  File::Temp: '0'
+  File::pushd: '0'
+  Getopt::Long: '0'
+  HTTP::Tiny: '0'
+  Pod::Usage: '0'
+  perl: '5.008002'
 resources:
   bugtracker: https://github.com/tokuhirom/Perl-Build/issues
   homepage: https://github.com/tokuhirom/Perl-Build
   repository: git://github.com/tokuhirom/Perl-Build.git
-version: 1.05
+version: '1.06'
 x_contributors:
   - 'Daisuke Murase <typester@cpan.org>'
   - 'Kent Fredric <kentfredric@gmail.com>'
@@ -53,3 +54,4 @@ x_contributors:
   - 'Kang-min Liu <gugod@gugod.org>'
   - 'Akihiro Uchida <uchida@ike-dyn.ritsumei.ac.jp>'
   - 'Neil Bowers <neil@bowers.com>'
+  - 'Katsuhiro KONISHI <konishi@hauN.org>'
