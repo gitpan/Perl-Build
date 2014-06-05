@@ -4,7 +4,7 @@
       "Tokuhiro Matsuno <tokuhirom@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v0.13.0",
+   "generated_by" : "Minilla/v1.1.0",
    "license" : [
       "perl_5"
    ],
@@ -37,6 +37,7 @@
          "requires" : {
             "Test::CPAN::Meta" : "0",
             "Test::MinimumVersion::Fast" : "0.04",
+            "Test::PAUSE::Permissions" : "0.04",
             "Test::Pod" : "1.41",
             "Test::Spellunker" : "v0.2.7"
          }
@@ -62,11 +63,11 @@
    "provides" : {
       "Perl::Build" : {
          "file" : "lib/Perl/Build.pm",
-         "version" : "1.06"
+         "version" : "1.07"
       },
       "Perl::Build::Built" : {
          "file" : "lib/Perl/Build/Built.pm",
-         "version" : "1.06"
+         "version" : "1.07"
       }
    },
    "release_status" : "stable",
@@ -80,7 +81,7 @@
          "web" : "https://github.com/tokuhirom/Perl-Build"
       }
    },
-   "version" : "1.06",
+   "version" : "1.07",
    "x_contributors" : [
       "Daisuke Murase <typester@cpan.org>",
       "Kent Fredric <kentfredric@gmail.com>",
@@ -89,6 +90,9 @@
       "Kang-min Liu <gugod@gugod.org>",
       "Akihiro Uchida <uchida@ike-dyn.ritsumei.ac.jp>",
       "Neil Bowers <neil@bowers.com>",
-      "Katsuhiro KONISHI <konishi@hauN.org>"
+      "Katsuhiro KONISHI <konishi@hauN.org>",
+      "Masahiro Chiba <nihen@megabbs.com>",
+      "hagihala <hagihala@hatena.ne.jp>",
+      "Masahiro Nagano <kazeburo@gmail.com>"
    ]
 }

@@ -4,6 +4,8 @@ LICENSE
 MANIFEST.SKIP
 META.json
 README.md
+author/Dockerfile
+author/Vagrantfile
 author/fatpack.sh
 cpanfile
 lib/Perl/Build.pm
@@ -12,6 +14,7 @@ minil.toml
 script/perl-build
 t/00_compile.t
 t/01_perl_build_built.t
+t/02_perl_release.t
 xt/02_perlcritic.t
 xt/live/01_available.t
 META.yml
