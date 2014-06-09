@@ -9,7 +9,7 @@ configure_requires:
   CPAN::Meta::Prereqs: '0'
   Module::Build: '0.38'
 dynamic_config: 0
-generated_by: 'Minilla/v1.1.0, CPAN::Meta::Converter version 2.140640'
+generated_by: 'Minilla/v1.1.0, CPAN::Meta::Converter version 2.141170'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -28,10 +28,10 @@ no_index:
 provides:
   Perl::Build:
     file: lib/Perl/Build.pm
-    version: '1.07'
+    version: '1.08'
   Perl::Build::Built:
     file: lib/Perl/Build/Built.pm
-    version: '1.07'
+    version: '1.08'
 requires:
   CPAN::Perl::Releases: '0'
   Devel::PatchPerl: '0.88'
@@ -39,22 +39,22 @@ requires:
   File::pushd: '0'
   Getopt::Long: '0'
   HTTP::Tiny: '0'
-  Pod::Usage: '0'
+  Pod::Usage: '1.63'
   perl: '5.008002'
 resources:
   bugtracker: https://github.com/tokuhirom/Perl-Build/issues
   homepage: https://github.com/tokuhirom/Perl-Build
   repository: git://github.com/tokuhirom/Perl-Build.git
-version: '1.07'
+version: '1.08'
 x_contributors:
   - 'Daisuke Murase <typester@cpan.org>'
   - 'Kent Fredric <kentfredric@gmail.com>'
   - 'Mark Stosberg <mark@stosberg.com>'
-  - 'Syohei YOSHIDA <syohex@gmail.com>'
   - 'Kang-min Liu <gugod@gugod.org>'
   - 'Akihiro Uchida <uchida@ike-dyn.ritsumei.ac.jp>'
   - 'Neil Bowers <neil@bowers.com>'
   - 'Katsuhiro KONISHI <konishi@hauN.org>'
   - 'Masahiro Chiba <nihen@megabbs.com>'
   - 'hagihala <hagihala@hatena.ne.jp>'
+  - 'Syohei YOSHIDA <syohex@gmail.com>'
   - 'Masahiro Nagano <kazeburo@gmail.com>'
