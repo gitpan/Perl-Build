@@ -63,11 +63,11 @@
    "provides" : {
       "Perl::Build" : {
          "file" : "lib/Perl/Build.pm",
-         "version" : "1.08"
+         "version" : "1.09"
       },
       "Perl::Build::Built" : {
          "file" : "lib/Perl/Build/Built.pm",
-         "version" : "1.08"
+         "version" : "1.09"
       }
    },
    "release_status" : "stable",
@@ -81,7 +81,7 @@
          "web" : "https://github.com/tokuhirom/Perl-Build"
       }
    },
-   "version" : "1.08",
+   "version" : "1.09",
    "x_contributors" : [
       "Daisuke Murase <typester@cpan.org>",
       "Kent Fredric <kentfredric@gmail.com>",
@@ -92,7 +92,9 @@
       "Katsuhiro KONISHI <konishi@hauN.org>",
       "Masahiro Chiba <nihen@megabbs.com>",
       "hagihala <hagihala@hatena.ne.jp>",
-      "Syohei YOSHIDA <syohex@gmail.com>",
-      "Masahiro Nagano <kazeburo@gmail.com>"
+      "Tony <zearin@gonk.net>",
+      "Kenichi Ishigaki <ishigaki@cpan.org>",
+      "Masahiro Nagano <kazeburo@gmail.com>",
+      "Syohei YOSHIDA <syohex@gmail.com>"
    ]
 }
