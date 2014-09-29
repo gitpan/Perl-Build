@@ -28,10 +28,10 @@ no_index:
 provides:
   Perl::Build:
     file: lib/Perl/Build.pm
-    version: '1.09'
+    version: '1.10'
   Perl::Build::Built:
     file: lib/Perl/Build/Built.pm
-    version: '1.09'
+    version: '1.10'
 requires:
   CPAN::Perl::Releases: '0'
   Devel::PatchPerl: '0.88'
@@ -45,7 +45,7 @@ resources:
   bugtracker: https://github.com/tokuhirom/Perl-Build/issues
   homepage: https://github.com/tokuhirom/Perl-Build
   repository: git://github.com/tokuhirom/Perl-Build.git
-version: '1.09'
+version: '1.10'
 x_contributors:
   - 'Daisuke Murase <typester@cpan.org>'
   - 'Kent Fredric <kentfredric@gmail.com>'
@@ -57,6 +57,6 @@ x_contributors:
   - 'Masahiro Chiba <nihen@megabbs.com>'
   - 'hagihala <hagihala@hatena.ne.jp>'
   - 'Tony <zearin@gonk.net>'
-  - 'Kenichi Ishigaki <ishigaki@cpan.org>'
-  - 'Masahiro Nagano <kazeburo@gmail.com>'
   - 'Syohei YOSHIDA <syohex@gmail.com>'
+  - 'Masahiro Nagano <kazeburo@gmail.com>'
+  - 'Kenichi Ishigaki <ishigaki@cpan.org>'
